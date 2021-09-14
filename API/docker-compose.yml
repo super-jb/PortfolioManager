@@ -16,3 +16,9 @@ services:
       dockerfile: PortfolioManager.API.PortofolioApi/Dockerfile
     depends_on:
       - db
+
+  portfoliomanager.api.authenticationapi:
+    image: ${DOCKER_REGISTRY-}portfoliomanagerapiauthenticationapi
+    build:
+      context: .
+      dockerfile: PortfolioManager.API.AuthenticationApi/Dockerfile
